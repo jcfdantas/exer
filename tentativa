@@ -1,0 +1,28 @@
+matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print()
+print("Matriz: ")
+print()
+for i in range(len(matriz)):
+    linha = []
+    for j in range(len(matriz[0])):
+        receber = int(input(f"Digite o valor para a posição ({i+1}, {j+1}): "))
+        linha.append(receber)
+    matriz.append(linha)
+print()
+numero = int(input("Digite o número que multiplicara a Matriz: "))
+print()
+matriz_m =[]
+def multiplicar_matri(matriz,numero):
+    matriz_m =[]
+    for i in range(len(matriz)):
+        n_linha=[]
+        for j in range(len(matriz[0])):
+            n_linha.append((matriz[j][i])*numero)
+        matriz_m.append(n_linha)
+    return matriz_m
+
+print()
+print(matriz)
+print()
+print(matriz_m)
+print()
