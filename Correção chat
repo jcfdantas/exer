@@ -1,0 +1,36 @@
+# Inicializa matriz 3x3 vazia
+matriz = []
+
+# Entrada de dados
+print("\nMatriz:")
+for i in range(3):
+    linha = []
+    for j in range(3):
+        valor = int(input(f"Digite o valor para a posição ({i+1}, {j+1}): "))
+        linha.append(valor)
+    matriz.append(linha)
+
+# Fator de multiplicação
+numero = int(input("\nDigite o número que multiplicará a matriz: "))
+
+# Função para multiplicar matriz
+def multiplicar_matriz(matriz, numero):
+    matriz_m = []
+    for i in range(len(matriz)):
+        nova_linha = []
+        for j in range(len(matriz[0])):
+            nova_linha.append(matriz[i][j] * numero)
+        matriz_m.append(nova_linha)
+    return matriz_m
+
+# Multiplicação
+matriz_multiplicada = multiplicar_matriz(matriz, numero)
+
+# Impressão das matrizes
+print("\nMatriz original:")
+for linha in matriz:
+    print(linha)
+
+print("\nMatriz multiplicada:")
+for linha in matriz_multiplicada:
+    print(linha)
